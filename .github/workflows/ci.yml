@@ -2,28 +2,28 @@ name: C CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    
-    - name: Install CMake
-      run: sudo apt-get install -y cmake
-      
-    - name: Create Build Directory
-      run: mkdir build
-      
-    - name: Configure CMake
-      run: cd build && cmake ..
-      
-    - name: Build
-      run: cd build && make
-      
-    - name: Run Tests
-      run: cd build && ./run_tests
+      - uses: actions/checkout@v2
+
+      - name: Install CMake
+        run: sudo apt-get install -y cmake
+
+      - name: Create Build Directory
+        run: mkdir build
+
+      - name: Configure CMake
+        run: cd build && cmake ..
+
+      - name: Build
+        run: cd build && make VERBOSE=1
+
+      - name: Run Tests
+        run: cd build && ./run_tests
