@@ -1,0 +1,13 @@
+# Build klasörü
+build/
+
+# Object dosyaları
+*.o
+
+# Çalıştırılabilir dosyalar
+kasa
+run_tests
+
+# IDE dosyaları
+.vscode/
+.idea/
