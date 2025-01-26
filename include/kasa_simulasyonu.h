@@ -12,7 +12,8 @@ struct SatinAlinan {
     char urun_adi[25];
     int adet;
     float fiyat;
-}alisveris[50];
+};
+extern struct SatinAlinan alisveris[50];
 
 int stok_kontrol(Urun *urun, int satis_adedi);
 int stoktan_dus(Urun *urun, int satis_adedi);

@@ -12,6 +12,7 @@
 
 int alisveris_sayisi = 0;
 float genel_toplam = 0;
+struct SatinAlinan alisveris[50];
 
 /**
  * @brief stok kontrolunun yapildigi fonksiyon
